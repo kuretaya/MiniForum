@@ -1,0 +1,90 @@
+
+:root {
+  --couleur-brun: #4e260170;
+  --couleur-brun-clair: #c29233a4;
+}
+
+
+body {
+  background-image: url('images.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.header{
+    background-color: #c29233a4;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.header h1{
+    color: #4e2601;
+    font-size: 2.5em;
+    margin: 0;
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+.nav{
+
+    list-style-type: none;
+    margin: 15px 0;
+    padding: 40px;
+    display: relative;
+    justify-content: center;
+    background-color: var(--couleur-brun);
+    border-radius: 5px;
+}
+
+.nav a{
+    font-size: 1.2em;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.nav a:hover{
+    color: var(--couleur-brun-clair);
+}
+
+.sujets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.sujets h2 {
+  width: 100%;
+  color: #4e2601;
+  font-size: 2em;
+  margin: 10px;
+}
+
+.sujets article {
+  width: 30%;
+  background-color: var(--couleur-brun-clair);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.Nouveau-sujet {
+  margin: 20px 0;
+  padding: 10px;
+  color: #4e2601;
+  border-radius: 5px;
+}
+
+.formulaire {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: var(--couleur-brun);
+  border-radius: 5px;
+  border: 2px solid #4e2601;
+}
+    
