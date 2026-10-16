@@ -1,15 +1,16 @@
-/* ===== Variables (à adapter aux couleurs du client) ===== */
+/* ===== Variables ===== */
 :root {
-  --color-bg: #f7f7f5;
-  --color-surface: #ffffff;
-  --color-text: #2b2b2b;
-  --color-muted: #6b6b6b;
-  --color-primary: #1f4e79;
-  --color-primary-hover: #163a5a;
-  --color-border: #e3e3e0;
-  --font-main: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  --max-width: 800px;
-  --radius: 8px;
+  --couleur-brun: #4e260170;
+  --couleur-brun-clair: #c29233a4;
+  --couleur-texte: #4e2601;
+  --arrondi: 0.5rem;
+
+  --couleur-fond: #f6efe3;
+  --couleur-surface: #fffaf2;
+  --couleur-attenuee: #8a6a4a;
+  --couleur-bordure: #c2923355;
+  --police: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --largeur-max: 50rem;
 }
 
 /* ===== Base ===== */
@@ -21,23 +22,24 @@
 
 .legal-page {
   margin: 0;
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-main);
-  font-size: 16px;
+  background: var(--couleur-fond);
+  color: var(--couleur-texte);
+  font-family: var(--police);
+  font-size: 1rem;
   line-height: 1.7;
+  overflow-wrap: break-word;
 }
 
 /* ===== En-tête ===== */
 .legal-header {
-  background: var(--color-primary);
-  color: #ffffff;
+  background: var(--couleur-brun-clair);
+  color: var(--couleur-texte);
   text-align: center;
-  padding: 60px 20px 40px;
+  padding: 3.75rem 1.25rem 2.5rem;
 }
 
 .legal-title {
-  margin: 0 0 10px;
+  margin: 0 0 0.625rem;
   font-size: 2.2rem;
   line-height: 1.2;
 }
@@ -50,17 +52,18 @@
 
 /* ===== Contenu ===== */
 .legal-content {
-  max-width: var(--max-width);
-  margin: -20px auto 40px;
-  padding: 40px;
-  background: var(--color-surface);
-  border-radius: var(--radius);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  max-width: var(--largeur-max);
+  margin: -1.25rem auto 2.5rem;
+  padding: 2.5rem;
+  background: var(--couleur-surface);
+  border: 0.125rem solid var(--couleur-brun-clair);
+  border-radius: var(--arrondi);
+  box-shadow: 0 0.25rem 1.25rem rgba(78, 38, 1, 0.12);
 }
 
 .legal-section {
-  padding: 24px 0;
-  border-bottom: 1px solid var(--color-border);
+  padding: 1.5rem 0;
+  border-bottom: 0.0625rem solid var(--couleur-bordure);
 }
 
 .legal-section:first-child {
@@ -73,13 +76,13 @@
 }
 
 .legal-section__title {
-  margin: 0 0 12px;
+  margin: 0 0 0.75rem;
   font-size: 1.3rem;
-  color: var(--color-primary);
+  color: var(--couleur-texte);
 }
 
 .legal-text {
-  margin: 0 0 12px;
+  margin: 0 0 0.75rem;
 }
 
 .legal-text:last-child {
@@ -88,73 +91,76 @@
 
 /* Bloc coordonnées (éditeur, hébergeur...) */
 .legal-text--info {
-  padding: 16px 20px;
-  background: var(--color-bg);
-  border-left: 4px solid var(--color-primary);
-  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  background: var(--couleur-fond);
+  border-left: 0.25rem solid var(--couleur-brun-clair);
+  border-radius: 0.25rem;
 }
 
 .legal-label {
-  color: var(--color-primary);
+  color: var(--couleur-texte);
+  font-weight: bold;
 }
 
 /* ===== Listes ===== */
 .legal-list {
-  margin: 0 0 12px;
-  padding-left: 20px;
+  margin: 0 0 0.75rem;
+  padding-left: 1.25rem;
 }
 
 .legal-list__item {
-  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
 }
 
 .legal-list__item::marker {
-  color: var(--color-primary);
+  color: var(--couleur-brun-clair);
 }
 
 /* ===== Liens ===== */
 .legal-link {
-  color: var(--color-primary);
+  color: var(--couleur-texte);
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration-color: var(--couleur-brun-clair);
+  text-underline-offset: 0.1875rem;
   word-break: break-word;
 }
 
 .legal-link:hover {
-  color: var(--color-primary-hover);
+  color: var(--couleur-attenuee);
 }
 
 /* ===== Pied de page ===== */
 .legal-footer {
   text-align: center;
-  padding: 0 20px 40px;
+  padding: 0 1.25rem 2.5rem;
 }
 
 .legal-nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .legal-nav__link {
-  color: var(--color-primary);
+  color: var(--couleur-texte);
   text-decoration: none;
   font-weight: 600;
 }
 
 .legal-nav__link:hover {
   text-decoration: underline;
+  text-decoration-color: var(--couleur-brun-clair);
 }
 
 .legal-nav__separator {
-  color: var(--color-muted);
+  color: var(--couleur-attenuee);
 }
 
 /* ===== Mobile ===== */
 @media (max-width: 600px) {
   .legal-header {
-    padding: 40px 16px 30px;
+    padding: 2.5rem 1rem 1.875rem;
   }
 
   .legal-title {
@@ -162,9 +168,11 @@
   }
 
   .legal-content {
-    margin: 0 0 30px;
-    padding: 24px 16px;
+    margin: 0 0 1.875rem;
+    padding: 1.5rem 1rem;
     border-radius: 0;
+    border-left: none;
+    border-right: none;
     box-shadow: none;
   }
 

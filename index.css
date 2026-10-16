@@ -83,7 +83,9 @@ img {
 }
 
 .Nouveau-sujet {
-  margin: 1.25rem 0;
+  width: 100%;
+  max-width: 40rem;
+  margin: 1.25rem auto;
   padding: 0.625rem;
   color: var(--couleur-texte);
   border-radius: var(--arrondi);
@@ -95,7 +97,23 @@ img {
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
-  margin: 1.25rem 0;
+  margin: 1.25rem auto;
+  padding: 0.625rem;
+  background-color: var(--couleur-brun-clair);
+  border-radius: var(--arrondi);
+  border: 0.125rem solid var(--couleur-texte);
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--couleur-texte);
+}
+
+.Une {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  width: 90%;
+  max-width: 50rem;
+  margin: 1.25rem auto;
   padding: 0.625rem;
   background-color: var(--couleur-brun-clair);
   border-radius: var(--arrondi);
@@ -106,9 +124,9 @@ img {
 }
 
 .Une .inscription {
-  display: inline-block;
+  align-self: center;
   padding: 0.625rem 1.25rem;
-  background-color: var(--couleur-brun-clair);
+  background-color: var(--couleur-texte);
   color: #ffffff;
   text-decoration: none;
   border-radius: var(--arrondi);
@@ -120,16 +138,19 @@ img {
 }
 
 .btnPublier {
-  padding: 0.625rem 1.25rem;
   background-color: var(--couleur-brun-clair);
   color: #ffffff;
   border: none;
+  padding: 2rem 8rem;
+  font-size: 2rem;
   border-radius: var(--arrondi);
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .btnPublier:hover {
@@ -137,9 +158,28 @@ img {
 }
 
 .footer {
+  width: 90%;
+  max-width: 50rem;
+  margin: 2.5rem auto 1.25rem;
   text-align: center;
-  padding: 1.00rem 0;
+  padding: 1rem;
+  background-color: var(--couleur-brun-clair);
   color: var(--couleur-texte);
   border: 0.125rem solid var(--couleur-texte);
   border-radius: var(--arrondi);
+  font-size: 0.95rem;
+}
+
+.footer p {
+  margin: 0.375rem 0;
+}
+
+.footer a {
+  color: var(--couleur-texte);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }

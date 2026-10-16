@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiniForum - Inscription</title>
+    <link rel="stylesheet" href="inscription.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>MiniForum</h1>
-        <nav>
-            <ul>
+        <nav >
+            <ul class="nav">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="sujet.html">Sujets</a></li>
                 <li><a href="connexion.html">Connexion</a></li>
@@ -19,11 +20,11 @@
     </header>
 
     <main>
-        <h2>Créer un compte</h2>
+        <h2 class="formulaire_inscription">Créer un compte</h2>
 
         <form action="/inscription" method="post">
 
-            <fieldset>
+            <fieldset class="formulaire_inscription">
                 <legend>Identifiants</legend>
 
                 <label for="pseudo">Pseudo</label>
@@ -39,7 +40,7 @@
                 <input type="date" id="naissance" name="naissance">
             </fieldset>
 
-            <fieldset>
+            <fieldset class="formulaire_inscription">
                 <legend>Préférences</legend>
 
                 <input type="checkbox" id="newsletter" name="newsletter">
@@ -49,14 +50,19 @@
                 <label for="cgu">J'accepte les conditions d'utilisation</label>
             </fieldset>
 
-            <button type="submit">Créer mon compte</button>
-            <a href="connexion.html">Déjà inscrit ? Se connecter</a>
+            <button type="submit" class="button">Créer mon compte</button>
+            <a href="connexion.html" class="connexion">Déjà inscrit ? Se connecter</a>
         </form>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>MiniForum - Projet du cours de développement web</p>
         <p>Classe passerelle - cfpt-i</p>
+        <p > &copy; 2024 MiniForum. Tous droits réservés.</p >
+        <p > <a href="mailto:contact@miniforum.ch">Nous contacter</a></p >
+        <p > <a href="politique-de-confidentialite.html">Politique de confidentialité</a></p >
+        <p > <a href="conditions-utilisation.html">Conditions d'utilisation</a></p >
+        <p > Producteur : Paulin Dossi & Claudecode(Politique et conditions)</p>
     </footer>
 </body>
 </html>

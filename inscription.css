@@ -1,0 +1,119 @@
+:root {
+  --couleur-brun: #4e260170;
+  --couleur-brun-clair: #c29233a4;
+  --couleur-texte: #4e2601;
+  --arrondi: 0.5rem;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-size: 1rem;
+  background-image: url('images.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  background-color: var(--couleur-brun-clair);
+  text-align: center;
+  border-radius: var(--arrondi);
+}
+
+.header h1 {
+  color: var(--couleur-texte);
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 1.25rem 0;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 1rem 0;
+  padding: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: var(--couleur-brun);
+  border-radius: var(--arrondi);
+}
+
+.nav a {
+  font-size: 1.2em;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.formulaire_inscription {
+  background-color: var(--couleur-brun-clair);
+  padding: 1.25rem;
+  border-radius: var(--arrondi);
+  max-width: 400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: max-content 1fr; /* colonne 1 : label, colonne 2 : champ */
+  gap: 0.75rem 1rem;
+  align-items: center;
+}
+
+.button {
+  background-color: var(--couleur-brun-clair);
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: var(--arrondi);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.connexion {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--couleur-texte);
+  text-decoration: underline;
+}
+
+.connexion:hover {
+  color: var(--couleur-brun-clair);
+}
+
+.footer {
+  width: 90%;
+  max-width: 50rem;
+  margin: 2.5rem auto 1.25rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--couleur-brun-clair);
+  color: var(--couleur-texte);
+  border: 0.125rem solid var(--couleur-texte);
+  border-radius: var(--arrondi);
+  font-size: 0.95rem;
+}
+
+.footer p {
+  margin: 0.375rem 0;
+}
+
+.footer a {
+  color: var(--couleur-texte);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

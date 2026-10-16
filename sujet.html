@@ -4,22 +4,23 @@
     <meta charset ="UTF -8">
     <meta name =" viewport " content =" width = device -width , initial - scale =1.0 ">
     <title > Bienvenue sur le MiniForum </title >
+    <link rel="stylesheet" href="sujet.css">
  </head >
  <body >
-    <header >
+    <header class="header">
         <h1 > MiniForum </h1 >
         <nav >
-            <ul >
+            <ul class="nav">
                 <li><a href="inscription.html">Inscription</a></li>
                 <li><a href="connexion.html">Connexion</a></li>
+                <li><a href="index.html">Retour à la liste des sujets</a></li>
             </ul >
         </nav > 
         
     </header>
 
 <main>
-        <a href="index.html">Retour à la liste des sujets</a>
-
+    <section id="sujets" class="sujets">
         <article >
             <h3 >Le référendum sur le retour du nucléaire en Suisse</h3 >
                 <strong > Auteur : </strong > Journal du Net <br >
@@ -38,7 +39,7 @@
 
             <form action="/replies" method="post">
         <h3>Répondre à ce sujet</h3>
-
+    </section>
         <fieldset>
             <legend>Votre réponse</legend>
 
@@ -51,7 +52,7 @@
 
         <button type="submit">Envoyer la réponse</button>
     </form>
-
+    <section class="sujets">
         <article >
             <h3 >L'AI Act européen après le report du Digital Omnibus</h3 >
                 <strong > Auteur : </strong >Journal du Net, article<br >
@@ -70,7 +71,7 @@
 
             <form action="/replies" method="post">
         <h3>Répondre à ce sujet</h3>
-
+    </section>
         <fieldset>
             <legend>Votre réponse</legend>
 
@@ -83,7 +84,7 @@
 
         <button type="submit">Envoyer la réponse</button>
     </form>
-
+    <section class="sujets">
         <article >
             <h3 > Les finances et la sécurité de la Suisse</h3 >
                 <strong > Auteur : </strong > Direction générale du Trésor (France)<br >
@@ -102,7 +103,7 @@
         </section>
     <form action="/replies" method="post">
         <h3>Répondre à ce sujet</h3>
-
+    </section>
         <fieldset>
             <legend>Votre réponse</legend>
 
@@ -117,9 +118,14 @@
     </form>
 </main>
 
-    <footer >
+    <footer class="footer" >
         <p > MiniForum - Projet du cours de développement web </p >
         <p > Classe passerelle -cfpt-i</p >
+        <p > &copy; 2024 MiniForum. Tous droits réservés.</p >
+        <p > <a href="mailto:contact@miniforum.ch">Nous contacter</a></p >
+        <p > <a href="politique-de-confidentialite.html">Politique de confidentialité</a></p >
+        <p > <a href="conditions-utilisation.html">Conditions d'utilisation</a></p >
+        <p > Producteur : Paulin Dossi & Claudecode(Politique et conditions)</p>
     </footer >  
 </body >
 </html >        
