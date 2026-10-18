@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiniForum - Connexion</title>
+    <link rel="stylesheet" href="connexion.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>MiniForum</h1>
         <nav>
-            <ul>
+            <ul class="nav">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="sujet.html">Sujets</a></li>
                 <li><a href="inscription.html">Inscription</a></li>
@@ -18,11 +19,11 @@
     </header>
 
     <main>
-        <h2>Se connecter</h2>
+        <h2 class="formulaire_connexion">Se connecter</h2>
 
         <form action="/connexion" method="post">
 
-            <fieldset>
+            <fieldset class="formulaire_connexion">
                 <legend>Vos identifiants</legend>
 
                 <label for="identifiant">Identifiant</label>
@@ -35,14 +36,19 @@
                 <label for="rester">Rester connecté</label>
             </fieldset>
 
-            <button type="submit">Se connecter</button>
-            <a href="inscription.html">Pas encore de compte ? S'inscrire</a>
+            <button type="submit" class="button">Se connecter</button>
+            <a href="inscription.html" class="inscription">Pas encore de compte ? S'inscrire</a>
         </form>
     </main>
 
-    <footer>
-        <p>MiniForum - Projet du cours de développement web</p>
-        <p>Classe passerelle - cfpt-i</p>
-    </footer>
+    <footer class="footer" >
+        <p > MiniForum - Projet du cours de développement web </p >
+        <p > Classe passerelle -cfpt-i</p >
+        <p > &copy; 2024 MiniForum. Tous droits réservés.</p >
+        <p > <a href="mailto:contact@miniforum.ch">Nous contacter</a></p >
+        <p > <a href="politique-de-confidentialite.html">Politique de confidentialité</a></p >
+        <p > <a href="conditions-utilisation.html">Conditions d'utilisation</a></p >
+        <p > Producteur : Paulin Dossi & Claudecode(Politique et conditions)</p>
+    </footer > 
 </body>
 </html>
