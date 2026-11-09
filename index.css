@@ -4,6 +4,7 @@
   --couleur-brun-clair: #c29233a4;
   --couleur-texte: #4e2601;
   --arrondi: 0.5rem;
+  --couleur-erreur: #A32020;
 }
 
 * {
@@ -182,4 +183,46 @@ img {
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+/* Message d'erreur sous un champ : JavaScript écrit le texte, le CSS décide de son allure */
+.message-erreur {
+  margin: 0;
+  color: var(--couleur-erreur);
+  font-size: 0.875rem;
+}
+
+/* Vide, il ne prend aucune place : le formulaire garde exactement son aspect */
+.message-erreur:empty {
+  display: none;
+}
+
+/* Options de publication : chaque bouton radio à gauche de son libellé, sur la même ligne */
+.formulaire:has(input[type="radio"]) {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 0.625rem;
+  row-gap: 0.625rem;
+}
+
+/* Tout ce qui n'est pas une paire radio + libellé occupe toute la largeur */
+.formulaire:has(input[type="radio"]) > :not(input[type="radio"]):not(input[type="radio"] + label) {
+  grid-column: 1 / -1;
+}
+
+.formulaire:has(input[type="radio"]) p {
+  margin: 0.625rem 0 0;
+}
+
+.formulaire input[type="radio"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  accent-color: var(--couleur-texte);
+  cursor: pointer;
+}
+
+.formulaire input[type="radio"] + label {
+  cursor: pointer;
 }

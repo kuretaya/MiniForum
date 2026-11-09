@@ -2,10 +2,11 @@
 
 <html lang ="fr">
  <head >
-    <meta charset ="UTF -8">
+    <meta charset="UTF-8">
     <meta name =" viewport " content =" width = device -width , initial - scale =1.0 ">
     <title > MiniForum - Accueil </title >
     <link rel="stylesheet" href="index.css">
+    <script src="app.js" defer></script>
  </head >
  <body >
     <header class="header" >
@@ -22,23 +23,9 @@
     </header>
 
  <main >
-    <section id="sujets" class="sujets" >
+    <section id="sujets" class="sujets liste-sujets" >
         <h2 > Sujets récents </h2 >
-        <article >
-            <h3 >Le référendum sur le retour du nucléaire en Suisse</h3 >
-                <strong > Auteur : </strong > Journal du Net <br >
-            <p > Plus de 125'000 personnes ont signé en trois mois le référendum contre le projet adopté par le Parlement en juin, qui lèverait l'interdiction de construire de nouvelles centrales nucléaires. La coalition référendaire réunit les Vert-e-s, le PS, le PVL, une partie du Centre et une trentaine d'organisations. L'article pourrait comparer les arguments des deux camps et rappeler le contexte de la votation de 2017.</p >
-        </article >
-        <article >
-            <h3 >L'AI Act européen après le report du Digital Omnibus</h3 >
-                <strong > Auteur : </strong >Journal du Net, article<br >
-            <p > Un texte adopté cet été a repoussé les obligations pour les systèmes à haut risque du 2 août 2026 au 2 décembre 2027. Ce qui est réellement entré en application le 2 août 2026, ce sont l'obligation de transparence, les pouvoirs de sanction des autorités nationales et l'encadrement de la formation des équipes. L'article expliquerait ce que ce calendrier change concrètement pour les entreprises, y compris suisses.</p >
-        </article >
-        <article >
-            <h3 > Les finances et la sécurité de la Suisse</h3 >
-                <strong > Auteur : </strong > Direction générale du Trésor (France)<br >
-            <p > La Confédération, qui prévoyait un déficit de 700 millions de francs pour 2026, anticipe désormais un excédent de 800 millions. Le Conseil fédéral demande en parallèle au Parlement un crédit supplémentaire de 970 millions pour la sécurité du pays. L'angle serait de se demander si cet excédent permet de financer la défense sans nouvelles dettes ni coupes ailleurs.</p >
-        </article >
+        <!-- plus aucune carte ici : app.js les dessine -->
     </section >
 
     <section class="Une" >
@@ -49,19 +36,22 @@
     <section>
     <h2 class="Nouveau-sujet">Nouveau sujet</h2>
 
-    <form action="/topics" method="post">
+    <form id="form-nouveau-sujet" action="/topics" method="post" novalidate>
 
         <fieldset class="formulaire">
             <legend>Votre message</legend>
 
             <label for="pseudo">Pseudo</label>
             <input type="text" id="pseudo" name="pseudo" placeholder="ex. : paulin42" required>
+            <p class="message-erreur" id="erreur-pseudo"></p>
 
             <label for="titre">Titre du sujet</label>
             <input type="text" id="titre" name="titre" maxlength="80" required>
+            <p class="message-erreur" id="erreur-titre"></p>
 
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="6" maxlength="500" required></textarea>
+            <p class="message-erreur" id="erreur-message"></p>
         </fieldset>
 
         <fieldset class="formulaire">
